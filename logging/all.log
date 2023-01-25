@@ -11538,3 +11538,50 @@
 [35m[39m
 2023-01-25 15:17:57:1757 [35mhttp[39m: [35mGET /api/hive/products 304 - - 0.259 ms[39m
 [35m[39m
+2023-01-25 15:18:01:181 [35mhttp[39m: [35mGET /api/hive/products 304 - - 0.227 ms[39m
+[35m[39m
+2023-01-25 15:18:03:183 [35mhttp[39m: [35mGET /api/hive/products 304 - - 0.400 ms[39m
+[35m[39m
+2023-01-25 15:18:07:187 [35mhttp[39m: [35mGET /api/hive/products 304 - - 0.221 ms[39m
+[35m[39m
+2023-01-25 15:18:09:189 [35mhttp[39m: [35mGET /api/hive/products 304 - - 0.314 ms[39m
+[35m[39m
+2023-01-25 15:18:13:1813 [35mhttp[39m: [35mGET /api/hive/products 304 - - 0.317 ms[39m
+[35m[39m
+2023-01-25 15:18:15:1815 [35mhttp[39m: [35mGET /api/hive/products 304 - - 0.276 ms[39m
+[35m[39m
+2023-01-25 15:18:19:1819 [35mhttp[39m: [35mGET /api/hive/products 304 - - 0.210 ms[39m
+[35m[39m
+2023-01-25 15:18:21:1821 [35mhttp[39m: [35mGET /api/hive/products 304 - - 0.293 ms[39m
+[35m[39m
+2023-01-25 15:18:24:1824 [35mhttp[39m: [35mGET /api/hive/products 304 - - 0.257 ms[39m
+[35m[39m
+2023-01-25 15:18:27:1827 [35mhttp[39m: [35mGET /api/hive/products 304 - - 0.236 ms[39m
+[35m[39m
+2023-01-25 15:18:30:1830 [35mhttp[39m: [35mGET /api/hive/products 304 - - 0.205 ms[39m
+[35m[39m
+2023-01-25 15:18:33:1833 [35mhttp[39m: [35mGET /api/hive/products 304 - - 0.231 ms[39m
+[35m[39m
+2023-01-25 15:18:36:1836 [35mhttp[39m: [35mGET /api/hive/products 304 - - 0.266 ms[39m
+[35m[39m
+2023-01-25 15:18:39:1839 [35mhttp[39m: [35mGET /api/hive/products 304 - - 0.217 ms[39m
+[35m[39m
+2023-01-25 15:18:40:1840 [32minfo[39m: [32mServer is up and running on port 3333[39m
+2023-01-25 15:18:42:1842 [35mhttp[39m: [35mGET /api/hive/products 304 - - 8.818 ms[39m
+[35m[39m
+2023-01-25 15:18:45:1845 [35mhttp[39m: [35mGET /api/hive/products 304 - - 0.687 ms[39m
+[35m[39m
+2023-01-25 15:18:48:1848 [35mhttp[39m: [35mGET /api/hive/products 304 - - 0.420 ms[39m
+[35m[39m
+2023-01-25 15:18:51:1851 [35mhttp[39m: [35mGET /api/hive/products 304 - - 0.434 ms[39m
+[35m[39m
+2023-01-25 15:18:54:1854 [35mhttp[39m: [35mGET /api/hive/products 304 - - 1.965 ms[39m
+[35m[39m
+2023-01-25 15:18:57:1857 [35mhttp[39m: [35mGET /api/hive/products 304 - - 0.356 ms[39m
+[35m[39m
+2023-01-25 15:19:00:190 [35mhttp[39m: [35mGET /api/hive/products 304 - - 0.254 ms[39m
+[35m[39m
+2023-01-25 15:19:03:193 [35mhttp[39m: [35mGET /api/hive/products 304 - - 0.266 ms[39m
+[35m[39m
+2023-01-25 15:19:07:197 [35mhttp[39m: [35mGET /api/hive/products 304 - - 0.482 ms[39m
+[35m[39m
