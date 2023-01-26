@@ -2,8 +2,32 @@ import { BrowserRouter, Link } from 'react-router-dom';
 import './app.module.css';
 import AppRouter from './routing/AppRouter';
 import '../fontAwesome';
+import axios from 'axios';
+import { Product } from './Hive/hiveTypes';
+import { useEffect, useState } from 'react';
 
 export const App = () => {
+  const [hiveProducts, setHiveProducts] = useState<Product[]>([]);
+
+  const loadProducts = async () => {
+    axios
+      .get('/api/hive/products')
+      .then((a) => a.data)
+      .then((products: Product[]) => {
+        setHiveProducts(products);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      loadProducts();
+    }, 10000);
+    loadProducts();
+    return () => clearInterval(intervalId);
+  }, []);
   return (
     <BrowserRouter>
       <nav className="navbar navbar-expand-lg bg-body-secondary">
@@ -28,23 +52,23 @@ export const App = () => {
             id="navbarNavAltMarkup"
           >
             <div className="navbar-nav">
-              <Link to="/" className="nav-link active" aria-current="page">
+              <Link to="/" className="nav-link">
                 Home
               </Link>
-              <Link to="/hive" className="nav-link active" aria-current="page">
+              <Link to="/hive" className="nav-link">
                 Hive
               </Link>
 
-              <a className="nav-link" href="#">
+              <Link to="/solar" className="nav-link">
                 Solar
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </nav>
 
       <main>
-        <AppRouter />
+        <AppRouter hiveProducts={hiveProducts} loadProducts={loadProducts} />
       </main>
     </BrowserRouter>
   );

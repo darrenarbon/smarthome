@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 import { CategoryTab } from './CategoryTab/CategoryTab';
@@ -29,37 +28,27 @@ const baseNavItems: NavItems = {
   [DeviceType.HotWater]: { label: 'Hot Water', devices: [] },
 };
 
-export const Hive = () => {
+type HiveProps = {
+  products: Product[];
+  loadProducts: () => void;
+};
+
+export const Hive = ({ products, loadProducts }: HiveProps) => {
   const [navItems, setNavItems] = useState<NavItems>();
 
-  const loadProducts = async () => {
-    axios
-      .get('/api/hive/products')
-      .then((a) => a.data)
-      .then((products: Product[]) => {
-        const currentNavItems = JSON.parse(JSON.stringify(baseNavItems));
-        products.forEach((product) => {
-          currentNavItems[product.type].devices.push(product);
-        });
-        setNavItems(currentNavItems);
-        console.log(currentNavItems);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      loadProducts();
-    }, 3000);
-    loadProducts();
-    return () => clearInterval(intervalId);
-  }, []);
+    const currentNavItems = JSON.parse(JSON.stringify(baseNavItems));
+    products.forEach((product) => {
+      currentNavItems[product.type].devices.push(product);
+    });
+    setNavItems(currentNavItems);
+  }, [products]);
 
   const categoryComponent = (name: string, product: Product) => {
     if (name === DeviceType.Light) {
-      return <Light product={product} key={product.id} />;
+      return (
+        <Light product={product} key={product.id} loadProducts={loadProducts} />
+      );
     }
 
     if (name === DeviceType.Plug) {

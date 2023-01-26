@@ -16,7 +16,7 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  font-size: 26px;
+  font-size: 20px;
   border: 3px #000000 solid;
   transition: background 0.5s;
   background: #618ca3;
@@ -48,10 +48,14 @@ button.temperature-text {
   width: 70px;
   font-size: 16px;
   color: #000000;
-  background: rgb(157, 243, 154);
+  background: rgb(184, 184, 184);
   border: 2px #000000 solid;
   line-height: 0;
   padding: 0;
+}
+
+button.temperature-text.active {
+  background: #ff5200 !important;
 }
 
 .temperature-container {
@@ -86,4 +90,80 @@ button.temperature:focus {
 
 .hot {
   background: #ff5200;
+}
+
+/* Boost Animations */
+
+.blob {
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  margin: 0.5rem;
+  height: 30px;
+  width: 30px;
+  transform: scale(1);
+  animation: pulse-black 2s infinite;
+}
+
+@keyframes pulse-black {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.blob.red {
+  background: rgb(255, 255, 255);
+  box-shadow: 0 0 0 0 rgba(255, 82, 82, 1);
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+  }
+}
+
+.blob.white {
+  background: white;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
+  animation: pulse-white 2s infinite;
+}
+
+@keyframes pulse-white {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
 }

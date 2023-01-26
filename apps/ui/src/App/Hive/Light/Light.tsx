@@ -4,9 +4,14 @@ import { changeBrightness, toggleLight } from '../hiveHelper';
 
 export type LightProps = {
   product: Product;
+  loadProducts: () => void;
 };
 
-export const Light = ({ product }: LightProps) => {
+export const Light = ({ product, loadProducts }: LightProps) => {
+  const _toggleLight = () => {
+    toggleLight(product);
+    loadProducts();
+  };
   return (
     <div
       className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2"
@@ -14,10 +19,7 @@ export const Light = ({ product }: LightProps) => {
     >
       <div className="card">
         <div className="row g-0">
-          <div
-            className="col-3 text-center"
-            onClick={() => toggleLight(product)}
-          >
+          <div className="col-3 text-center" onClick={() => _toggleLight()}>
             <button className="btn btn-link text-dark h-100 align-middle">
               {product.props.online &&
               product.state.status &&
